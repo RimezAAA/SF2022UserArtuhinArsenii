@@ -50,7 +50,7 @@ namespace SF2022UserArtuhinArsenii
                         {
                             if (i < startTimes.Length - 1)
                             {
-                                if ((startTimes[i + 1] - endConsultationTime).Minutes < consultationTime)
+                                if ((startTimes[i + 1] - endConsultationTime).Minutes < consultationTime && (startTimes[i + 1] - endConsultationTime).Minutes > 0)
                                 {
                                     tmp2 = startTimes[i + 1] + TimeSpan.FromMinutes(durations[i + 1]);
                                     //Console.WriteLine($"1 {tmp.ToString(@"hh\:mm")}");
