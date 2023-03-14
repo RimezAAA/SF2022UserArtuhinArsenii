@@ -83,21 +83,45 @@ namespace Application
             //    Console.WriteLine(item);
             //}
             //------------------------------------------------------------------------------------------------------------------------------------
+            //TimeSpan[] startTimes = new TimeSpan[]
+            //{
+            //    new TimeSpan(13,0,0),
+            //    new TimeSpan(14,10,0),
+            //    new TimeSpan(17,30,0),
+            //};
+            //int[] durations = new int[]
+            //{
+            //    40,
+            //    20,
+            //    50,
+            //};
+            //TimeSpan beginWorkingTime = new TimeSpan(12, 0, 0);
+            //TimeSpan endWorkingTime = new TimeSpan(19, 0, 0);
+            //int consultationTime = 30;
+
+            //Calculations calculations = new Calculations(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
+            //foreach (var item in calculations.AvailablePeriods())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //------------------------------------------------------------------------------------------------------------------------------------
             TimeSpan[] startTimes = new TimeSpan[]
             {
-                new TimeSpan(13,0,0),
-                new TimeSpan(14,10,0),
-                new TimeSpan(17,30,0),
+                new TimeSpan(6,0,0),
+                new TimeSpan(8,10,0),
+                new TimeSpan(9,0,0),
+                new TimeSpan(12,30,0),
             };
             int[] durations = new int[]
             {
-                40,
+                10,
+                30,
                 20,
-                50,
+                40,
             };
-            TimeSpan beginWorkingTime = new TimeSpan(12, 0, 0);
-            TimeSpan endWorkingTime = new TimeSpan(19, 0, 0);
-            int consultationTime = 30;
+            TimeSpan beginWorkingTime = new TimeSpan(6, 0, 0);
+            TimeSpan endWorkingTime = new TimeSpan(14, 0, 0);
+            int consultationTime = 50;
 
             Calculations calculations = new Calculations(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
             foreach (var item in calculations.AvailablePeriods())
