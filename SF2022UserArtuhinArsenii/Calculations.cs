@@ -46,9 +46,29 @@ namespace SF2022UserArtuhinArsenii
                     //Console.WriteLine($"Время приёма: {startTimes[i].ToString(@"hh\:mm")}-{endConsultationTime.ToString(@"hh\:mm")}");
                     if (tmp >= startTimes[i] && tmp < endConsultationTime)
                     {
-                        tmp2 = endConsultationTime;
-                        check= false;
+                        if (durations[i] != consultationTime)
+                        {
+                            if (i < startTimes.Length-1)
+                            {
+                                if ((startTimes[i + 1] - endConsultationTime).Minutes < consultationTime)
+                                {
+                                    tmp2 = startTimes[i + 1] + TimeSpan.FromMinutes(durations[i + 1]);
+                                    //Console.WriteLine($"1 {tmp.ToString(@"hh\:mm")}");
+                                }
+                            }
+                            else
+                            {
+                                tmp2 = endConsultationTime;
+                                //Console.WriteLine($"2 {tmp2.ToString(@"hh\:mm")}");
+                            }
+                        }
+                        check = false;
                         break;
+                    }
+                    else if (tmp + TimeSpan.FromMinutes(consultationTime) > startTimes[i] && tmp < endConsultationTime)
+                    {
+                        tmp2 = endConsultationTime;
+                        check = false; break;
                     }
                 }
                 
