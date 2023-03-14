@@ -32,29 +32,29 @@ namespace Application
             //{
             //    Console.WriteLine(item);
             //}
+            //------------------------------------------------------------------------------------------------------------------------------------
+            //TimeSpan[] startTimes = new TimeSpan[]
+            //{
+            //    new TimeSpan(9,0,0),
+            //    new TimeSpan(12,0,0),
+            //    new TimeSpan(13,0,0),
+            //};
+            //int[] durations = new int[]
+            //{
+            //    10,
+            //    50,
+            //    30,
+            //};
+            //TimeSpan beginWorkingTime = new TimeSpan(9, 0, 0);
+            //TimeSpan endWorkingTime = new TimeSpan(16, 0, 0);
+            //int consultationTime = 50;
 
-            TimeSpan[] startTimes = new TimeSpan[]
-            {
-                new TimeSpan(9,0,0),
-                new TimeSpan(12,0,0),
-                new TimeSpan(13,0,0),
-            };
-            int[] durations = new int[]
-            {
-                10,
-                50,
-                30,
-            };
-            TimeSpan beginWorkingTime = new TimeSpan(9, 0, 0);
-            TimeSpan endWorkingTime = new TimeSpan(16, 0, 0);
-            int consultationTime = 50;
-
-            Calculations calculations = new Calculations(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
-            foreach (var item in calculations.AvailablePeriods())
-            {
-                Console.WriteLine(item);
-            }
-
+            //Calculations calculations = new Calculations(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
+            //foreach (var item in calculations.AvailablePeriods())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //------------------------------------------------------------------------------------------------------------------------------------
             //TimeSpan[] startTimes = new TimeSpan[]
             //{
             //    new TimeSpan(8,0,0),
