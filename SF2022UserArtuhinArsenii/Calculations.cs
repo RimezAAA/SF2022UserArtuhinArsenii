@@ -28,7 +28,7 @@ namespace SF2022UserArtuhinArsenii
         {
             List<string> freeTime = new List<string>();
             TimeSpan tmp = beginWorkingTime;
-            while(tmp < endWorkingTime)
+            while(tmp + TimeSpan.FromMinutes(consultationTime) <= endWorkingTime)
             {
                 TimeSpan tmp2 = tmp + TimeSpan.FromMinutes(consultationTime);
                 bool check = true;
@@ -48,12 +48,16 @@ namespace SF2022UserArtuhinArsenii
                     {
                         if (durations[i] != consultationTime)
                         {
-                            if (i < startTimes.Length-1)
+                            if (i < startTimes.Length - 1)
                             {
                                 if ((startTimes[i + 1] - endConsultationTime).Minutes < consultationTime)
                                 {
                                     tmp2 = startTimes[i + 1] + TimeSpan.FromMinutes(durations[i + 1]);
                                     //Console.WriteLine($"1 {tmp.ToString(@"hh\:mm")}");
+                                }
+                                else
+                                {
+                                    tmp2 = endConsultationTime;
                                 }
                             }
                             else
